@@ -15,7 +15,7 @@ from lib.slack import SlackClient
 from lib.utils import remove_emoji, retry
 
 
-def summarize(text: str, language: str = "Japanese"):
+def summarize(text: str, language: str = "English"):
     """
     Summarize a chat log in bullet points, in the specified language.
 

@@ -21,7 +21,7 @@ def summarize(text: str, language: str = "English"):
 
     Args:
         text (str): The chat log to summarize, in the format "Speaker: Message" separated by line breaks.
-        language (str, optional): The language to use for the summary. Defaults to "Japanese".
+        language (str, optional): The language to use for the summary. Defaults to "English".
 
     Returns:
         str: The summarized chat log in bullet point format.
@@ -154,7 +154,7 @@ def split_messages_by_token_count(messages: list[str]) -> list[list[str]]:
 OPEN_AI_TOKEN = str(os.environ.get('OPEN_AI_TOKEN')).strip()
 SLACK_BOT_TOKEN = str(os.environ.get('SLACK_BOT_TOKEN')).strip()
 CHANNEL_ID = str(os.environ.get('SLACK_POST_CHANNEL_ID')).strip()
-LANGUAGE = str(os.environ.get('LANGUAGE') or "Japanese").strip()
+LANGUAGE = str(os.environ.get('LANGUAGE') or "English").strip()
 TIMEZONE_STR = str(os.environ.get('TIMEZONE') or 'Asia/Tokyo').strip()
 TEMPERATURE = float(os.environ.get('TEMPERATURE') or 0.3)
 CHAT_MODEL = str(os.environ.get('CHAT_MODEL') or "gpt-3.5-turbo").strip()

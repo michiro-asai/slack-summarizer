@@ -185,6 +185,8 @@ def runner():
                                               end_time)
         if messages is None:
             continue
+        if str(channel["name"]).startswith('gp') is False:
+            continue
 
         # remove emojis in messages
         messages = list(map(remove_emoji, messages))
